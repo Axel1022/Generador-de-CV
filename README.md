@@ -2,6 +2,8 @@
 
 Bienvenido al proyecto **Generador de CV**. Este proyecto está diseñado para ayudarte a crear tu currículum de manera fácil y rápida utilizando una interfaz web intuitiva.
 
+**Nota**: Este proyecto aún está en desarrollo y algunas características pueden no estar completamente implementadas.
+
 ## 📋 Características
 
 - **Información Personal**: Rellena tus datos personales como nombre, título, correo electrónico, teléfono, fecha de nacimiento y enlace de LinkedIn.
