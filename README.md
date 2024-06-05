@@ -64,7 +64,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 Para cualquier pregunta o comentario, puedes contactar al autor:
 
-- **Nombre**: [Gary Alexander Campusano Paredes]
+- **Nombre**: Gary Alexander Campusano Paredes
 - **Correo**: [ingcampusano@outlook.com](mailto:ingcampusano@outlook.com)
 - **LinkedIn**: [Linkedin](https://www.linkedin.com/in/gary-alexander-campusano-paredes-87a28724a/)
 
