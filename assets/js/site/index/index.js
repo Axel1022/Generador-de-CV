@@ -96,7 +96,6 @@ function inputValidator(element, isValid) {
   } else {
     element.classList.remove("input-error");
     element.classList.add("input-success");
-    // No alerts here
     return isValid;
   }
 }
