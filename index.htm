@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de CV</title>
+
+    <!--#region Links CSS  -->
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/site/main.css">
+    <!--#endregion -->
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Generador de CV</h1>
+
+        <!--#region Información Personal  -->
+        <section id="informacion-personal" class="mt-5">
+            <h3>Información Personal</h3>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Ingresa tu título">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" class="form-control" id="fecha-nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">Enlace de LinkedIn:</label>
+                    <input type="url" class="form-control" id="linkedin" placeholder="Ingresa tu perfil de LinkedIn">
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!--#region Habilidades  -->
+        <section id="habilidades" class="mt-5">
+            <h3>Habilidades</h3>
+            <form>
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <label for="habilidad" class="sr-only">Habilidad:</label>
+                        <input type="text" class="form-control" id="habilidad" placeholder="Ej: C#">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="puntuacion-habilidad" class="sr-only">Puntuación:</label>
+                        <select class="form-control" id="puntuacion-habilidad">
+                            <option value="">Elige una puntuación</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                            Habilidad</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!--#region Software  -->
+        <section id="software" class="mt-5">
+            <h3>Software</h3>
+            <form>
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <label for="software" class="sr-only">Software:</label>
+                        <input type="text" class="form-control" id="software" placeholder="Ej: Photoshop">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="puntuacion-software" class="sr-only">Puntuación:</label>
+                        <select class="form-control" id="puntuacion-software">
+                            <option value="">Elige una puntuación</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                            Software</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!--#region Idiomas  -->
+        <section id="idiomas" class="mt-3">
+            <h3>Idiomas</h3>
+            <form>
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <input type="text" class="form-control" id="idioma" placeholder="Idioma">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="puntuacion-idioma" class="sr-only">Puntuación:</label>
+                        <select class="form-control" id="puntuacion-idioma">
+                            <option value="">Elige una puntuación</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar Idioma</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!-- #region Resumen-->
+        <section id="resumen" class="mt-5">
+            <h3>Resumen Profesional</h3>
+            <form>
+                <div class="form-group">
+                    <textarea name="resumen" id="resumen-profesional" class="form-control" rows="5"
+                        placeholder="Escribe un breve resumen de tu experiencia profesional"></textarea>
+                </div>
+            </form>
+        </section>
+        <!-- #endregion -->
+
+        <!--#region Experiencia Laboral  -->
+        <section id="experiencia-laboral" class="mt-5">
+            <h3>Experiencia Laboral</h3>
+            <form class="form-group">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="empresa" placeholder="Empresa">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-inicio">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-fin">
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                            Experiencia</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!--#region Educación  -->
+        <section id="educacion" class="mt-5">
+            <h3>Educación</h3>
+            <form class="form-group">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="instituto" placeholder="Instituto">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-inicio-educacion">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-fin-educacion">
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                            Educación</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <!--#region Certificaciones  -->
+        <section id="certificaciones" class="mt-5">
+            <h3>Certificaciones</h3>
+            <form class="form-group" id="certificaciones-form">
+                <div class="row certificacion-row">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="certificacion" placeholder="Certificación">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-inicio-certificacion">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" id="fecha-fin-certificacion">
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                            Certificación</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--#endregion -->
+
+        <button onclick="validate()" class="btn btn-success mb-5" id="btn-generar-cv">Generar CV</button>
+    </div>
+
+    <!--#region Scripts  -->
+    <script src="./assets/js/lib/Bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/js/site/index/index.js"></script>
+    <!--#endregion -->
+
+    <!--#region Footer  -->
+    <!-- Falta poner el pies de pagina -->
+    <!--#endregion -->
+</body>
+
+</html>

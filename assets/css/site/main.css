@@ -1,0 +1,10 @@
+.input-error
+{
+    border-color: rgb(255, 0, 0);
+    border-width: medium ;
+}
+.input-success
+{
+    border-color: rgb(13, 255, 0);
+    border-width: medium ;
+}
