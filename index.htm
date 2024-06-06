@@ -31,11 +31,13 @@
                     </div>
                     <div class="form-group">
                         <label for="correo">Correo Electrónico:</label>
-                        <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+                        <input type="email" class="form-control" id="correo"
+                            placeholder="Ingresa tu correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono:</label>
-                        <input type="text" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
+                        <input type="text" class="form-control" id="telefono"
+                            placeholder="Ingresa tu número de teléfono">
                     </div>
                     <div class="form-group">
                         <label for="fecha-nacimiento">Fecha de nacimiento:</label>
@@ -43,7 +45,8 @@
                     </div>
                     <div class="form-group">
                         <label for="linkedin">Enlace de LinkedIn:</label>
-                        <input type="url" class="form-control" id="linkedin" placeholder="Ingresa tu perfil de LinkedIn">
+                        <input type="url" class="form-control" id="linkedin"
+                            placeholder="Ingresa tu perfil de LinkedIn">
                     </div>
                 </form>
             </section>
@@ -69,10 +72,15 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <div class="col-md-12 text-right mb-3">
-                            <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                                Habilidad</button>
-                        </div>
+                    </div>
+                    <div id="unoMasHabilidad">
+                        <!-- Aqui va el generado dinamicamente -->
+                    </div>
+
+                    <div class="col-md-12 text-right mb-3">
+                        <button onclick="unoMasHabilidad()" type="button" class="btn btn-primary"
+                            id="agregar-certificacion">Agregar
+                            Habilidad</button>
                     </div>
                 </form>
             </section>
@@ -98,11 +106,16 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <div class="col-md-12 text-right mb-3">
-                            <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                                Software</button>
-                        </div>
                     </div>
+                    <div id="unoMasSoftwere" class="row">
+                        <!-- Aqui va el generado dinamicamente -->
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button onclick="unoMasSoftwere()" type="button" class="btn btn-primary"
+                            id="agregar-certificacion">Agregar
+                            Software</button>
+                    </div>
+
                 </form>
             </section>
             <!--#endregion -->
@@ -126,9 +139,15 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <div class="col-md-12 text-right mb-3">
-                            <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar Idioma</button>
-                        </div>
+
+                    </div>
+                    <div id="unoMasIdioma" class="row">
+
+                    </div>
+                    <div class="col-md-12 text-right mb-3">
+                        <button onclick="unoMasIdioma()" type="button" class="btn btn-primary"
+                            id="agregar-certificacion">Agregar
+                            Idioma</button>
                     </div>
                 </form>
             </section>
@@ -161,10 +180,14 @@
                     <div class="col-md-4 mb-3">
                         <input type="date" class="form-control" id="fecha-fin">
                     </div>
-                    <div class="col-md-12 text-right mb-3">
-                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                            Experiencia</button>
-                    </div>
+
+                </div>
+                <div id="unoMasExperiencia" class="row">
+
+                </div>
+                <div onclick="unoMasExperiencia()" class="col-md-12 text-right mb-3">
+                    <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                        Experiencia</button>
                 </div>
             </form>
         </section>
@@ -184,10 +207,14 @@
                     <div class="col-md-4 mb-3">
                         <input type="date" class="form-control" id="fecha-fin-educacion">
                     </div>
-                    <div class="col-md-12 text-right mb-3">
-                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                            Educación</button>
-                    </div>
+
+                </div>
+                <div id="unoMasEducacion" class="row">
+
+                </div>
+                <div onclick="unoMasEducacion()" class="col-md-12 text-right mb-3">
+                    <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                        Educación</button>
                 </div>
             </form>
         </section>
@@ -197,7 +224,7 @@
         <section id="certificaciones" class="mt-5">
             <h3>Certificaciones</h3>
             <form class="form-group" id="certificaciones-form">
-                <div class="row certificacion-row">
+                <div class="row">
                     <div class="col-md-4 mb-3">
                         <input type="text" class="form-control" id="certificacion" placeholder="Certificación">
                     </div>
@@ -207,10 +234,13 @@
                     <div class="col-md-4 mb-3">
                         <input type="date" class="form-control" id="fecha-fin-certificacion">
                     </div>
-                    <div class="col-md-12 text-right mb-3">
-                        <button type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                            Certificación</button>
-                    </div>
+                </div>
+                <div id="unoMasCertificacion" class="row">
+
+                </div>
+                <div class="col-md-12 text-right mb-3">
+                    <button onclick="unoMasCertificacion()" type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
+                        Certificación</button>
                 </div>
             </form>
         </section>
@@ -221,8 +251,7 @@
 
     <!-- #region CV -->
     <section class="container mt-5">
-        <div id="cv-container" class="row">
-
+        <div id="cv-container" class="row ">
 
         </div>
     </section>
