@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="en">
 
 <head>
@@ -83,8 +83,8 @@
             <form>
                 <div class="row">
                     <div class="col-md-8 mb-3">
-                        <label for="software" class="sr-only">Software:</label>
-                        <input type="text" class="form-control" id="software" placeholder="Ej: Photoshop">
+                        <label for="software1" class="sr-only">Software:</label>
+                        <input type="text" class="form-control" id="software1" placeholder="Ej: Photoshop">
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="puntuacion-software" class="sr-only">Puntuación:</label>
@@ -214,8 +214,20 @@
         </section>
         <!--#endregion -->
 
-        <button onclick="validate()" class="btn btn-success mb-5" id="btn-generar-cv">Generar CV</button>
+        <button onclick="generarCv()" class="btn btn-success mb-5" id="btn-generar-cv">Generar CV</button>
     </div>
+
+    <!-- #region CV -->
+    <section class="container mt-5">
+        <div id="cv-container" class="row">
+
+
+        </div>
+    </section>
+    <!-- #endregion -->
+
+
+
 
     <!--#region Scripts  -->
     <script src="./assets/js/lib/Bootstrap/bootstrap.min.js"></script>
