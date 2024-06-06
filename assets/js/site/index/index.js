@@ -106,6 +106,73 @@ function validate() {
 
   return isValid;
 }
+function limpiarFormulario() {
+  document.getElementById("nombre").value = "";
+  document.getElementById("titulo").value = "";
+  document.getElementById("correo").value = "";
+  document.getElementById("telefono").value = "";
+  document.getElementById("fecha-nacimiento").value = "";
+  document.getElementById("linkedin").value = "";
+
+  document.getElementById("habilidad").value = "";
+  document.getElementById("puntuacion-habilidad").selectedIndex = 0;
+
+  document.getElementById("software1").value = "";
+  document.getElementById("puntuacion-software").selectedIndex = 0;
+
+  document.getElementById("idioma").value = "";
+  document.getElementById("puntuacion-idioma").selectedIndex = 0;
+
+  document.getElementById("resumen-profesional").value = "";
+
+  document.getElementById("empresa").value = "";
+  document.getElementById("fecha-inicio").value = "";
+  document.getElementById("fecha-fin").value = "";
+
+  document.getElementById("instituto").value = "";
+  document.getElementById("fecha-inicio-educacion").value = "";
+  document.getElementById("fecha-fin-educacion").value = "";
+
+  document.getElementById("certificacion").value = "";
+  document.getElementById("fecha-inicio-certificacion").value = "";
+  document.getElementById("fecha-fin-certificacion").value = "";
+
+  // Elimina las clases de validación si existen
+  const elements = [
+    "nombre",
+    "titulo",
+    "correo",
+    "telefono",
+    "fecha-nacimiento",
+    "linkedin",
+    "habilidad",
+    "puntuacion-habilidad",
+    "software1",
+    "puntuacion-software",
+    "idioma",
+    "puntuacion-idioma",
+    "resumen-profesional",
+    "empresa",
+    "fecha-inicio",
+    "fecha-fin",
+    "instituto",
+    "fecha-inicio-educacion",
+    "fecha-fin-educacion",
+    "certificacion",
+    "fecha-inicio-certificacion",
+    "fecha-fin-certificacion",
+  ];
+
+  elements.forEach((elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.classList.remove("input-error");
+      element.classList.remove("input-success");
+    }
+  });
+}
+
+
 function inputValidator(element, isValid) {
   const inputValue = element.value;
   if (inputValue == "" || inputValue == undefined || inputValue == null) {
@@ -131,9 +198,10 @@ function estrellas(cantidad) {
 }
 
 function generarCv() {
-  if (validate()) {
+  if (!validate()) {
     alert("Please complete the form");
   } else {
+
     // Obtener el contenedor donde se insertará el contenido
     let cvContainer = document.getElementById("cv-container");
     let valueNombre = inputNombre.value;
@@ -334,7 +402,9 @@ function generarCv() {
     });
 
     cvContainer.appendChild(divRight);
+
+    limpiarFormulario();
   }
 }
 
-// Para propósitos de demostración, llamar a generarCv() al cargar la página
+
