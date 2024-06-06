@@ -118,8 +118,20 @@ function inputValidator(element, isValid) {
     return isValid;
   }
 }
+function estrellas(cantidad) {
+  let estrellas = "";
+  let resto = 5 - cantidad;
+  for (let i = 0; i < cantidad; i++) {
+    estrellas += "★";
+  }
+  for (let i = 0; i < resto; i++) {
+    estrellas += "✫";
+  }
+  return estrellas;
+}
+
 function generarCv() {
-  if (!validate()) {
+  if (validate()) {
     alert("Please complete the form");
   } else {
     // Obtener el contenedor donde se insertará el contenido
@@ -146,6 +158,7 @@ function generarCv() {
     let valueCertificacion = inputCertificacion.value;
     let valueFechaInicioCertificacion = inputFechaInicioCertificacion.value;
     let valueFechaFinCerticicacion = inputFechaFinCerticicacion.value;
+    let strellas = "";
 
     // Crear los elementos del CV
     let col12 = document.createElement("div");
@@ -218,9 +231,11 @@ function generarCv() {
     ulHabilidades.className = "list-unstyled";
     ulHabilidades.id = "cv-habilidades";
 
+    strellas = estrellas(valuePuntuacionHabilidad);
+
     let liHabilidad = document.createElement("li");
     liHabilidad.className = "d-flex justify-content-between";
-    liHabilidad.innerHTML = `<span>${valueHabilidad}</span><span>${valuePuntuacionHabilidad}</span>`;
+    liHabilidad.innerHTML = `<span>${valueHabilidad}</span><span>${strellas}</span>`;
     ulHabilidades.appendChild(liHabilidad);
 
     cardBodyHabilidades.appendChild(ulHabilidades);
@@ -239,9 +254,11 @@ function generarCv() {
     ulSoftware.className = "list-unstyled";
     ulSoftware.id = "cv-software";
 
+    strellas = estrellas(valueSoftwarePoint);
+
     let liSoftware = document.createElement("li");
     liSoftware.className = "d-flex justify-content-between";
-    liSoftware.innerHTML = `<span>${valueSoftware}</span><span>${valueSoftwarePoint}</span>`;
+    liSoftware.innerHTML = `<span>${valueSoftware}</span><span>${strellas}</span>`;
     ulSoftware.appendChild(liSoftware);
 
     cardBodySoftware.appendChild(ulSoftware);
@@ -260,9 +277,11 @@ function generarCv() {
     ulIdiomas.className = "list-unstyled";
     ulIdiomas.id = "cv-idiomas";
 
+    strellas = estrellas(valueIdiomaPoint);
+
     let liIdioma = document.createElement("li");
     liIdioma.className = "d-flex justify-content-between";
-    liIdioma.innerHTML = `<span>${valueIdioma}</span><span>${valueIdiomaPoint}</span>`;
+    liIdioma.innerHTML = `<span>${valueIdioma}</span><span>${strellas}</span>`;
     ulIdiomas.appendChild(liIdioma);
 
     cardBodyIdiomas.appendChild(ulIdiomas);
