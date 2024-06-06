@@ -1,81 +1,105 @@
+//#region Variables globales
+
+//#region Informacion Personal
+let inputNombre = document.getElementById("nombre");
+let inputTitulo = document.getElementById("titulo");
+let inputCorreo = document.getElementById("correo");
+let inputTelefono = document.getElementById("telefono");
+let inputFechaNacimiento = document.getElementById("fecha-nacimiento");
+let inputLinkedin = document.getElementById("linkedin");
+//#endregion
+
+//#region Habilidades
+let inputHabilidad = document.getElementById("habilidad");
+let inputPuntuacionHabilidad = document.getElementById("puntuacion-habilidad");
+//#endregion
+
+//#region Software
+let inputSoftware = document.getElementById("software");
+let inputSoftwarePoint = document.getElementById("puntuacion-software");
+//#endregion
+
+//#region Idiomas
+let inputIdioma = document.getElementById("idioma");
+let inputIdiomaPoint = document.getElementById("puntuacion-idioma");
+//#endregion
+
+//#region Resumen
+let inputResumen = document.getElementById("resumen-profesional");
+//#endregion
+
+//#region Experiencia Laboral
+let inputEmpresa = document.getElementById("empresa");
+let inputFechaInicioEmpresa = document.getElementById("fecha-inicio");
+let inputFechaFinEmpresa = document.getElementById("fecha-fin");
+//#endregion
+
+//#region Educación
+let inputInstituto = document.getElementById("instituto");
+let inputFechaInicioInstituto = document.getElementById(
+  "fecha-inicio-educacion"
+);
+let inputFechaFinInstituto = document.getElementById("fecha-fin-educacion");
+//#endregion
+
+//#region Certificaciones
+let inputCertificacion = document.getElementById("certificacion");
+let inputFechaInicioCertificacion = document.getElementById(
+  "fecha-inicio-certificacion"
+);
+let inputFechaFinCerticicacion = document.getElementById(
+  "fecha-fin-certificacion"
+);
+//#endregion
+
+//#endregion
+
 function validate() {
   let isValid = true;
 
   //#region Informacion Personal
-  let inputNombre = document.getElementById("nombre");
-  let inputTitulo = document.getElementById("titulo");
   isValid = inputValidator(inputNombre, isValid);
   isValid = inputValidator(inputTitulo, isValid);
-
-  let inputCorreo = document.getElementById("correo");
-  let inputTelefono = document.getElementById("telefono");
   isValid = inputValidator(inputCorreo, isValid);
   isValid = inputValidator(inputTelefono, isValid);
-
-  let inputFechaNacimiento = document.getElementById("fecha-nacimiento");
-  let inputLinkedin = document.getElementById("linkedin");
   isValid = inputValidator(inputFechaNacimiento, isValid);
   isValid = inputValidator(inputLinkedin, isValid);
   //#endregion
 
   //#region Habilidades
-  let inputHabilidad = document.getElementById("habilidad");
   isValid = inputValidator(inputHabilidad, isValid);
-  let inputPuntuacionHabilidad = document.getElementById(
-    "puntuacion-habilidad"
-  );
   isValid = inputValidator(inputPuntuacionHabilidad, isValid);
   //#endregion
 
   //#region Software
-  let inputSoftware = document.getElementById("software");
   isValid = inputValidator(inputSoftware, isValid);
-  let inputSoftwarePoint = document.getElementById("puntuacion-software");
   isValid = inputValidator(inputSoftwarePoint, isValid);
   //#endregion
 
   //#region Idiomas
-  let inputIdioma = document.getElementById("idioma");
   isValid = inputValidator(inputIdioma, isValid);
-  let inputIdiomaPoint = document.getElementById("puntuacion-idioma");
   isValid = inputValidator(inputIdiomaPoint, isValid);
   //#endregion
 
   //#region Resumen
-  let inputResumen = document.getElementById("resumen-profesional");
   isValid = inputValidator(inputResumen, isValid);
   //#endregion
 
   //#region Experiencia Laboral
-  let inputEmpresa = document.getElementById("empresa");
   isValid = inputValidator(inputEmpresa, isValid);
-  let inputFechaInicioEmpresa = document.getElementById("fecha-inicio");
   isValid = inputValidator(inputFechaInicioEmpresa);
-  let inputFechaFinEmpresa = document.getElementById("fecha-fin");
   isValid = inputValidator(inputFechaFinEmpresa);
   //#endregion
 
   //#region Educación
-  let inputInstituto = document.getElementById("instituto");
   isValid = inputValidator(inputInstituto, isValid);
-  let inputFechaInicioInstituto = document.getElementById(
-    "fecha-inicio-educacion"
-  );
   isValid = inputValidator(inputFechaInicioInstituto);
-  let inputFechaFinInstituto = document.getElementById("fecha-fin-educacion");
   isValid = inputValidator(inputFechaFinInstituto, isValid);
   //#endregion
 
   //#region Certificaciones
-  let inputCertificacion = document.getElementById("certificacion");
   isValid = inputValidator(inputCertificacion, isValid);
-  let inputFechaInicioCertificacion = document.getElementById(
-    "fecha-inicio-certificacion"
-  );
   isValid = inputValidator(inputFechaInicioCertificacion);
-  let inputFechaFinCerticicacion = document.getElementById(
-    "fecha-fin-certificacion"
-  );
   isValid = inputValidator(inputFechaFinCerticicacion, isValid);
   //#endregion
 
