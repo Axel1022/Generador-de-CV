@@ -8,3 +8,11 @@
     border-color: rgb(13, 255, 0);
     border-width: medium ;
 }
+#div-left, #div-right {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.card-body {
+  background-color: white; 
+}
