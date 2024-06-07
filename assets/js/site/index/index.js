@@ -463,7 +463,7 @@ function estrellas(cantidad) {
 }
 
 function generarCv() {
-  if (validate()) {
+  if (!validate()) {
     alert("ERROR: COMPLETE EL FORMULARIO.");
     return;
   } else alert("CV GENERADO.");
