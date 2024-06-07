@@ -221,29 +221,30 @@
         <!--#endregion -->
 
         <!--#region Certificaciones  -->
-        <section id="certificaciones" class="mt-5">
-            <h3>Certificaciones</h3>
-            <form class="form-group" id="certificaciones-form">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="certificacion" placeholder="Certificacion">
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <input type="date" class="form-control agregadoDinamicamente" id="fecha-inicio-certificacion">
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <input type="date" class="form-control agregadoDinamicamente" id="fecha-fin-certificacion">
-                    </div>
-                </div>
-                <div id="unoMasCertificacion" class="row">
+                <section id="certificaciones" class="mt-5">
+                    <h3>Certificaciones</h3>
+                    <form class="form-group" id="certificaciones-form">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <input type="text" class="form-control" id="certificacion" placeholder="Certificacion">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <input type="date" class="form-control" id="fecha-inicio-certificacion">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <input type="date" class="form-control" id="fecha-fin-certificacion">
+                            </div>
+                        </div>
+                        <div id="unoMasCertificacion" class="row">
 
-                </div>
-                <div class="col-md-12 text-right mb-3">
-                    <button onclick="unoMasCertificacion()" type="button" class="btn btn-primary" id="agregar-certificacion">Agregar
-                        Certificación</button>
-                </div>
-            </form>
-        </section>
+                        </div>
+                        <div class="col-md-12 text-right mb-3">
+                            <button onclick="unoMasCertificacion()" type="button" class="btn btn-primary"
+                                id="agregar-certificacion">Agregar
+                                Certificación</button>
+                        </div>
+                    </form>
+                </section>
         <!--#endregion -->
 
         <button onclick="generarCv()" class="btn btn-success mb-5" id="btn-generar-cv">Generar CV</button>
